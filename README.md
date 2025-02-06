@@ -4,20 +4,25 @@ This smart contract, written in Clarity, represents certificates of ownership fo
 
 ## Contract Details
 
-- **File Path:** `contracts/art-ownership.clar`
+- **File Path:** `contracts/AOC.clar`
 - **Language:** Clarity
 
 ## Features
 
-- **Ownership Management:** 
-  - Maintains a record of ownership for each artwork using a unique token ID.
-  - Allows querying of the current owner and the active status of the ownership.
+- **Minting Art Tokens:** 
+  - Allows the creation of new art tokens with specified name, description, and artist.
+  - Ensures unique token IDs and validates input parameters.
 
-- **Artwork Details:**
-  - Stores detailed information about each artwork, including name, description, artist, and timestamps for creation and updates.
+- **Ownership Transfer:**
+  - Enables the transfer of art token ownership to a new owner.
+  - Validates the current owner and ensures the token is active before transfer.
 
-- **Token Supply Management:**
-  - Keeps track of the current token ID supply.
+- **Querying Functions:**
+  - Provides read-only functions to retrieve art details and current owner information.
+  - Includes error handling for non-existent or inactive tokens.
+
+- **Token Deactivation:**
+  - Allows deactivation of tokens by the contract owner, marking them as inactive.
 
 ## Error Handling
 
